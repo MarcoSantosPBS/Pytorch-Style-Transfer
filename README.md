@@ -7,7 +7,7 @@ Implementação baseada no artigo: https://www.cv-foundation.org/openaccess/cont
 <p align="left">
   <img src="Imagens/Cachorro.jpg" width="250" height ="250" title="hover text">
   <img src="Estilos/Tsunami_by_hokusai_19th_century.jpg" width="250" height ="250" title="hover text">
-  <img src="wave_dog.png" width="250" height ="250" title="hover text">
+  <img src="Results/wave_dog.png" width="250" height ="250" title="hover text">
 </p>
 
 
@@ -18,4 +18,3 @@ Nesta implementação é criada uma *imagem alvo* (TI - Target Image) que pode s
 Com o conteúdo e e o estilo em mãos, calculamos a distância entre os pixels de TI e os de CI e SI. O erro do estilo é calculado separadamente do erro do conteúdo. Para calcular os erros é utilizada a métrica MSE (Mean Squared Error) para a diferença entre o conteúdo de TI e o conteúdo de CI. Já para o estilo, é usado MSE, entre as matrizes de GRAM de TI e SI e esse resultado é multiplicado por um peso. Os erros são somados e com isso é calculado o gradiente para atualizar os pixels da TI.
 
 Implementação realizada durante o curso Deep Learning Nanodegree.
-# Pytorch-Style-Transfer
