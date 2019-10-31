@@ -38,13 +38,13 @@ class ImageProcessor:
             new_size = CI_size if max(CI_size) > max(SI_size) else SI_size
 
         in_transformers = transforms.Compose([
-        transforms.Resize( (new_size, new_size) ),
+        transforms.Resize(new_size),
         transforms.ToTensor(),
         transforms.Normalize((0.485, 0.456, 0.406), 
                              (0.229, 0.224, 0.225))
     ])
 
-    content_image = in_transformers(content_image).unsqueeze(0)
-    style_image = in_transformers(style_image).unsqueeze(0)
+        content_image = in_transformers(content_image).unsqueeze(0)
+        style_image = in_transformers(style_image).unsqueeze(0)
 
-    return content_image, style_image
+        return content_image.to('cuda'), style_image.to('cuda')

@@ -1,5 +1,4 @@
 import torch
-import matplotlib.pyplot as plt
 from torch.optim import Adam
 from torchvision import models
 from Processor import ImageProcessor
@@ -14,10 +13,10 @@ for param in vgg.parameters():
 
 if use_cuda: vgg = vgg.to('cuda')
 
-ImageProcessor('','')
+processor =  ImageProcessor('Imagens/Cachorro.jpg','Estilos/Tsunami_by_hokusai_19th_century.jpg')
 
-content_tensor, style_tensor = ImageProcessor.load_images()
+content_tensor, style_tensor = processor.load_images()
 
 tf = Transfer(content_tensor, style_tensor, vgg)
 
-tf.Run(5000)
+tf.Run(5000,500)
