@@ -1,4 +1,4 @@
 torchvision==0.4.1+cpu
 torch==1.3.0+cpu
 matplotlib==2.2.2
-Pillow==6.2.1
+Pillow==9.0.0
